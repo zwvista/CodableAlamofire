@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-internal final class DataKeyPathSerializer<SerializedObject: Decodable>: DataResponseSerializerProtocol {
+public final class DataKeyPathSerializer<SerializedObject: Decodable>: DataResponseSerializerProtocol {
 
     private let keyPath: String?
     private let decoder: JSONDecoder
