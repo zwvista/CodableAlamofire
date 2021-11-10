@@ -13,12 +13,12 @@ public final class DataKeyPathSerializer<SerializedObject: Decodable>: DataRespo
     private let keyPath: String?
     private let decoder: JSONDecoder
 
-    init(keyPath: String?, decoder: JSONDecoder = JSONDecoder()) {
+    public init(keyPath: String?, decoder: JSONDecoder = JSONDecoder()) {
         self.keyPath = keyPath
         self.decoder = decoder
     }
 
-    func serialize(request: URLRequest?, response: HTTPURLResponse?, data: Data?, error: Error?) throws -> SerializedObject {
+    public func serialize(request: URLRequest?, response: HTTPURLResponse?, data: Data?, error: Error?) throws -> SerializedObject {
         if let error = error {
             throw error
         }
